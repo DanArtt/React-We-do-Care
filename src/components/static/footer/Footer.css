@@ -1,0 +1,9 @@
+.ajuste {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoFooter {
+    color: white;
+}
