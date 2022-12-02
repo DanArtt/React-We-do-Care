@@ -73,7 +73,7 @@ export default function NavBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar className='bg'>
+        <Toolbar className='gradient'>
           <IconButton
             edge="start"
             className={classes.menuButton}

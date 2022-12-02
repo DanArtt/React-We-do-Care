@@ -4,6 +4,8 @@ import './App.css';
 import NavBar, { NavBar2 } from './components/static/navBar/Navbar';
 import Footer from './components/static/footer/Footer'
 import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import Cadastro from './pages/cadastro/Cadastro';
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />} />
+          
+          <Route path="logar" element={<Login />} />
+          
+          <Route path="cadastrar" element={<Cadastro />} />
 
         </Routes>
 
