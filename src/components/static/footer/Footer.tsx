@@ -76,9 +76,9 @@ export default function Footer() {
                             </Link>
                         </Box>
 
-                        <Box>
-                            <Link href="/" color="inherit">
-                                
+                        <Box className="textoPadding">
+                            <Link target='_blank' href="https://mail.google.com/mail/u/3/#inbox?compose=CllgCJvnrQRvWBJlmdcGkgmDXPXXljqpJfZDClgshhgkZCMFRPDcsqxhrfSVGBdvxPpQZkrtpcg" color="inherit">
+                                we.do.care.commerce@gmail.com
                             </Link>
                         </Box>
                     </Grid>
@@ -86,7 +86,7 @@ export default function Footer() {
                     <Grid item xs={12} sm={3} >
                         <Box borderBottom={1} className='textoBold' > Redes Sociais </Box>
                         <Box className="textoPadding">
-                            <Link target='_blank' href="/" color="inherit">
+                            <Link target='_blank' href="https://www.instagram.com/we.do.care.commerce/" color="inherit">
                                 Instagram
                             </Link>
                         </Box>

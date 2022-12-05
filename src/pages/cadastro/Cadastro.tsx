@@ -88,29 +88,27 @@ function Cadastro() {
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
 
-
-
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-
-
-
                         <TextField value={user.nome_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='nome' label='Nome Completo' variant='outlined' name='nome_usuario' margin='normal' fullWidth />
 
+                        <Grid className='container'>
                         <TextField value={user.genero_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='genero' label='Gênego' variant='outlined' name='genero_usuario' margin='normal' fullWidth />
 
-                        <TextField value={user.estado_civil} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='estadoCivil' label='Estado Civil' variant='outlined' name='estado_civil' margin='normal' fullWidth />
+                        <TextField value={user.estado_civil} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='estadoCivil' label='Estado Civil' variant='outlined' name='estado_civil' margin='normal' fullWidth className='ml mr' />
+
+                        <TextField value={user.etnia_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='etnia' label='Etnia' variant='outlined' name='etnia_usuario' margin='normal' fullWidth />
+                        </Grid>
+
+                        <Grid className='container'>
+                        <TextField value={user.data_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='data' label='Data de Nascimento' variant='outlined' name='data_usuario' margin='normal' fullWidth />
+
+                        <TextField value={user.cpf_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf_usuario' margin='normal' fullWidth className='ml mr' />
+
+                        <TextField value={user.rg_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='rg' label='RG' variant='outlined' name='rg_usuario' margin='normal' fullWidth />
+                        </Grid>
 
                         <TextField value={user.profissao_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='profissao' label='Profissão' variant='outlined' name='profissao_usuario' margin='normal' fullWidth />
 
                         <TextField value={user.renda_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='renda' label='Renda Mensal' variant='outlined' name='renda_usuario' margin='normal' fullWidth />
-
-                        <TextField value={user.etnia_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='etnia' label='Etnia' variant='outlined' name='etnia_usuario' margin='normal' fullWidth />
-
-                        <TextField value={user.data_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='data' label='Data de Nascimento' variant='outlined' name='data_usuario' margin='normal' fullWidth />
-
-                        <TextField value={user.cpf_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='cpf' label='CPF' variant='outlined' name='cpf_usuario' margin='normal' fullWidth />
-
-                        <TextField value={user.rg_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='rg' label='RG' variant='outlined' name='rg_usuario' margin='normal' fullWidth />
 
                         <TextField value={user.cep_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='cep' label='CEP' variant='outlined' name='cep_usuario' margin='normal' fullWidth />
 
@@ -120,12 +118,15 @@ function Cadastro() {
 
                         <TextField value={user.email_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='email' label='Email' variant='outlined' name='email_usuario' margin='normal' fullWidth />
 
-                        <TextField value={user.senha_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' variant='outlined' name='senha_usuario' margin='normal' type='password' fullWidth />
+                        <Grid className='container'>
+                        <TextField value={user.senha_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' variant='outlined' name='senha_usuario' margin='normal' type='password' fullWidth className=' mr' />
 
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        </Grid>
 
                         <TextField value={user.descricao_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='descricao' label='Informe sua Necessidade' variant='outlined' name='descricao_usuario' margin='normal' type='textarea' fullWidth />
 
+                        <Grid className='container mt'>
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/logar' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>
@@ -136,6 +137,7 @@ function Cadastro() {
                                 Cadastrar
                             </Button>
                         </Box>
+                        </Grid>
                     </form>
                 </Box>
             </Grid>

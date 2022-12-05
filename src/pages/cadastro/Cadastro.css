@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content:  center;
+}
+
+.ml {
+    margin-left: 1rem;
+}
+
+.mr {
+    margin-right: 1rem;
+}
+
+.mr-10 {
+    margin-right: 5rem;
+}
+
+.mt {
+    padding-bottom: 2rem;
+}
