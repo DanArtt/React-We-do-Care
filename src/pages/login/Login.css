@@ -1,0 +1,12 @@
+.negrito {
+    font-weight: bold !important;
+    color: black !important;;
+}
+
+.text-link {
+    text-decoration: none;
+}
+
+body {
+    background-color: #BAD1C2;
+}
