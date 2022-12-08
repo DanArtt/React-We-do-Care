@@ -8,12 +8,13 @@ import { createStyles, alpha, Theme, makeStyles } from '@material-ui/core/styles
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1
-      
+
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -73,13 +74,13 @@ export default function NavBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar className='bg'>
+        <Toolbar className='bg2'>
           <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
-            
+
           >
             <MenuIcon />
           </IconButton>
@@ -102,9 +103,9 @@ export default function NavBar() {
         </Toolbar>
       </AppBar>
     </div>
-    
-    
-    
+
+
+
   );
 }
 
@@ -122,23 +123,39 @@ export function NavBar2() {
             color="inherit"
             aria-label="open drawer"
           >
-            
+
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Categorias 
-          </Typography>
+          <Link to='/home' className='text-none cursor spacing'>
+            <Typography className={classes.title} variant="h6" noWrap>
+              Home
+            </Typography>
+          </Link>
+          <Link to='/categorias' className='text-none cursor spacing'>
+            <Typography className={classes.title} variant="h6" noWrap>
+              Categorias
+            </Typography>
+          </Link>
+          <Link to='/categoriasform' className='text-none cursor'>
+            <Typography className={classes.title} variant="h6" noWrap>
+              Criar Categoria
+            </Typography>
+          </Link>
+          <Link to='/produtosform' className='text-none cursor'>
+            <Typography className={classes.title} variant="h6" noWrap>
+              Criar Produto
+            </Typography>
+          </Link>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
-              
             </div>
-            
-              
+
+
           </div>
         </Toolbar>
       </AppBar>
     </div>
-    
-    
-    
+
+
+
   );
 }

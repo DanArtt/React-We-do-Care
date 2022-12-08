@@ -6,11 +6,14 @@ import './Cadastro.css';
 import User from '../../models/User';
 import { cadastro } from '../../services/Service';
 import './Cadastro.css';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/action';
 
 function Cadastro() {
 
     let navigate = useNavigate();
     const [confirmarSenha, setConfirmarSenha] = useState<String>("")
+    const dispatch = useDispatch();
     const [user, setUser] = useState<User>(
         {
             id_usuario: 0,
@@ -51,14 +54,6 @@ function Cadastro() {
             senha_usuario: '',
             descricao_usuario: ''
         })
-
-
-
-    useEffect(() => {
-        if (userResult.id_usuario !== 0) {
-            navigate("/login")
-        }
-    }, [userResult])
 
 
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {

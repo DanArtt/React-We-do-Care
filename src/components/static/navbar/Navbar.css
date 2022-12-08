@@ -1,3 +1,20 @@
 .bg {
-    background-color: #4c5c0c;
+    background-color: #64CB34;
+}
+
+.text-none {
+    text-decoration: none;
+}
+
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.bg2 {
+    background-color: #0bb12a;
+}
+
+.spacing {
+    padding: 1rem;
 }
