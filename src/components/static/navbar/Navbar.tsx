@@ -135,12 +135,12 @@ export function NavBar2() {
               Categorias
             </Typography>
           </Link>
-          <Link to='/categoriasform' className='text-none cursor'>
+          <Link to='/categoriasform' className='text-none cursor spacing'>
             <Typography className={classes.title} variant="h6" noWrap>
               Criar Categoria
             </Typography>
           </Link>
-          <Link to='/produtosform' className='text-none cursor'>
+          <Link to='/produtosform' className='text-none cursor spacing'>
             <Typography className={classes.title} variant="h6" noWrap>
               Criar Produto
             </Typography>

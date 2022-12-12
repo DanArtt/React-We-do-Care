@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, Button, TextField } from '@material-ui/core';
 import { Box } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useRouteError } from 'react-router-dom';
 import './Cadastro.css';
 import User from '../../models/User';
 import { cadastro } from '../../services/Service';
@@ -74,12 +74,15 @@ function Cadastro() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         if (confirmarSenha == user.senha_usuario) {
-            cadastro(`/usuario/cadastrar`, user, setUserResult)
-            alert('Usuário cadastrado com sucesso')
-        } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
-        }
+            try{
+                await cadastro(`/usuario/cadastrar`, user, setUserResult)
+                alert('Usuário cadastrado com sucesso')
+            }catch(error){
+                alert('Checa aê')
+            }            
+        } 
     }
+
 
 
     return (
