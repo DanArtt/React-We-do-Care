@@ -5,6 +5,7 @@ import {Button } from "@material-ui/core"
 import {Box} from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 import Login from './Login';
+import './Login.css';
 
 
 function getModalStyle() {

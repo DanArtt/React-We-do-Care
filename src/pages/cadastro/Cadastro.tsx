@@ -6,14 +6,11 @@ import './Cadastro.css';
 import User from '../../models/User';
 import { cadastro } from '../../services/Service';
 import './Cadastro.css';
-import { useDispatch } from 'react-redux';
-import { addToken } from '../../store/tokens/action';
 
 function Cadastro() {
 
     let navigate = useNavigate();
     const [confirmarSenha, setConfirmarSenha] = useState<String>("")
-    const dispatch = useDispatch();
     const [user, setUser] = useState<User>(
         {
             id_usuario: 0,
@@ -88,7 +85,7 @@ function Cadastro() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10} paddingY={7}>
+                <Box paddingX={1} paddingY={1} className='mt'>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='negrito'>Cadastrar</Typography>
                         <TextField value={user.nome_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeCompleto' label='Nome Completo' variant='outlined' name='nome_usuario' margin='normal' fullWidth />
