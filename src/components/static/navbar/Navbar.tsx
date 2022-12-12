@@ -9,6 +9,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ModalLogin from '../../../pages/login/ModalLogin';
+import { Box } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -100,6 +103,10 @@ export default function NavBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          <Box marginRight={1}>
+            <ModalLogin />
+          </Box>
+
         </Toolbar>
       </AppBar>
     </div>

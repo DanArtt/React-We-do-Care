@@ -7,6 +7,8 @@ import UserLogin from '../../models/userLogin';
 import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/action';
+import ModalLogin from './ModalLogin';
+
 
 function Login() {
     let navigate = useNavigate();
@@ -49,7 +51,7 @@ function Login() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
+                <Box paddingX={5}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='negrito'>Entrar</Typography>
                         <TextField value={userLogin.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Email' variant='outlined' name='email' margin='normal' fullWidth />
@@ -64,7 +66,7 @@ function Login() {
                         <Box marginRight={1}>
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
-                        <Link to='/cadastro' className='text-link'>
+                        <Link to='/cadastro' className='text-link' onClick={ModalLogin}>
                             <Typography variant='subtitle1' gutterBottom align='center' className='negrito'>Cadastre-se!</Typography>
                         </Link>
 

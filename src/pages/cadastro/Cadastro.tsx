@@ -78,7 +78,7 @@ function Cadastro() {
                 await cadastro(`/usuario/cadastrar`, user, setUserResult)
                 alert('Usuário cadastrado com sucesso')
             }catch(error){
-                alert('Checa aê')
+                alert('Dados Incorretos')
             }            
         } 
     }
