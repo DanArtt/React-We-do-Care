@@ -49,7 +49,7 @@ function ListaCategoria() {
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarTema/${categoria.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 deletar

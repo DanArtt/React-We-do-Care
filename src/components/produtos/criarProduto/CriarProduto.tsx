@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
-import { buscaId, post } from '../../../services/Service';
+import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 import './CriarProduto.css';
 
@@ -28,7 +28,7 @@ function CriarProduto() {
     })
 
     async function findById(id: string) {
-        buscaId(`/produtos/id/${id}`, setProduto)
+        buscaId(`/produtos/${id}`, setProduto)
     }
 
     useEffect(() => {
@@ -55,15 +55,23 @@ function CriarProduto() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
+        console.log(Object.values(produto))
+
         if (id !== undefined) {
-            alert("Essa função ainda não está disponível")
+            put(`/produtos/atualizar`, produto, setProduto, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Produto atualizade com sucesse');
+
         } else {
             post('/produtos/criar', produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert("Produto criado com sucesso")
+            alert("Produto criade com sucesse")
         }
         back()
     }
@@ -74,15 +82,15 @@ function CriarProduto() {
 
     return (
         <>
-            <Container maxWidth="sm" className="topo">
+            <Container maxWidth="sm" className="topo ">
                 <form onSubmit={onSubmit}>
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criação de Produto</Typography>
+                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Administração de Produto - ID {produto.id}</Typography>
                     <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="fornecedor" label="Nome do Produto" variant="outlined" name="nome" margin="normal" fullWidth />
                     <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="modelo" label="Preço" variant="outlined" name="preco" margin="normal" fullWidth />
                     <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="material" label="Quantidade" variant="outlined" name="quantidade" margin="normal" fullWidth />
                     <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="material" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
                     <TextField value={produto.detalhe_produto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="detalhe" label="Detalhes do Produto" variant="outlined" name="detalhe_produto" margin="normal" fullWidth />
-                    <TextField value={produto.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="detalhe" label="Foto" variant="outlined" name="foto" margin="normal" fullWidth />
+                    <TextField value={produto.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="foto" label="Foto" variant="outlined" name="foto" margin="normal" fullWidth />
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>

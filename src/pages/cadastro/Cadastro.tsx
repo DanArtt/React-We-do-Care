@@ -70,6 +70,9 @@ function Cadastro() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+
+        console.log(Object.values(user))
+
         if (confirmarSenha == user.senha_usuario) {
             try{
                 await cadastro(`/usuario/cadastrar`, user, setUserResult)
@@ -80,12 +83,10 @@ function Cadastro() {
         } 
     }
 
-
-
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} alignItems='center'>
-                <Box paddingX={1} paddingY={1} className='mt'>
+                <Box paddingX={1} paddingY={1}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='negrito'>Cadastrar</Typography>
                         <TextField value={user.nome_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeCompleto' label='Nome Completo' variant='outlined' name='nome_usuario' margin='normal' fullWidth />
@@ -125,9 +126,11 @@ function Cadastro() {
                                     Cancelar
                                 </Button>
                             </Link>
+                            <Link to='/login' className='text-link'>
                             <Button type='submit' variant='contained' color='primary'>
                                 Cadastrar
                             </Button>
+                            </Link>
                         </Box>
                     </form>
                 </Box>

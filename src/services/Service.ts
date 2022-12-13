@@ -28,8 +28,16 @@ export const buscaId = async (url: any, setDado: any) => {
 }
 
 // Método de Cadastrar Produto/Categoria
-export const post = async (url: any, setDado: any, header: any, dados: any) => {
-    const resposta = await api.post(url, header, dados)
+export const post = async (url: any, dados: any, setDado: any, header: any) => {
+    const resposta = await api.post(url, dados, header);
     setDado(resposta.data)
 }
 
+export const put = async (url: any, dados: any, setDado: any, header: any) => {
+    const resposta = await api.put(url, dados, header)
+    setDado(resposta.data)
+}
+
+export const deleteId = async (url: any, header: any) => {
+    await api.delete(url, header)
+}

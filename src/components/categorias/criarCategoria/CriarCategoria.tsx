@@ -4,11 +4,11 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import { buscaId, post } from '../../../services/Service';
+import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 import './CriarCategoria.css';
 
-function CadastroCategoria() {
+function CriarCategoria() {
 
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
@@ -52,27 +52,32 @@ function CadastroCategoria() {
         e.preventDefault()
 
         if (id !== undefined) {
-            alert("Essa função ainda não está disponível")
-        } else {
-            post('/categoria/criar', categoria, setCategoria, {
-                header: {
+            put(`/categoria/atualizar`, categoria, setCategoria, {
+                headers: {
                     'Authorization': token
                 }
             })
-            alert("Categoria criada com sucesso")
+            alert('Categoria atualizade com sucesse');
+        } else {
+            post('/categoria/criar', categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert("Categoria criade com sucesse")
         }
         back()
     }
 
     function back() {
-        navigate('/categorias')
+        navigate('/home')
     }
 
     return (
         <>
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criação de Categoria</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Administração de Categoria - {categoria.modelo}</Typography>
                 <TextField value={categoria.fornecedor} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="fornecedor" label="Fornecedor" variant="outlined" name="fornecedor" margin="normal" fullWidth />
                 <TextField value={categoria.modelo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="modelo" label="Modelo" variant="outlined" name="modelo" margin="normal" fullWidth />
                 <TextField value={categoria.material} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="material" label="Material" variant="outlined" name="material" margin="normal" fullWidth />
@@ -85,4 +90,4 @@ function CadastroCategoria() {
     )
 }
 
-export default CadastroCategoria;
+export default CriarCategoria;

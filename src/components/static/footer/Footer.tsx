@@ -10,7 +10,8 @@ export default function Footer() {
         
         <Box px={{ xs: 3, sm: 10 }}
             py={{ xs: 5, sm: 10 }}
-            style={{ background: "#4c5c0c" }}>
+            style={{ background: "#4c5c0c" }}
+            className='mt'>
 
             <Container maxWidth="lg" >
                 <Grid container spacing={8} className=" textoFooter">

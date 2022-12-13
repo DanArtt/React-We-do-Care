@@ -1,5 +1,5 @@
 body {
-    background-color: #c7afaf;
+    background-color: #f2f3f4;
 }
 
 .carrossel {
@@ -10,3 +10,16 @@ body {
     padding-bottom: 1rem;
 }
 
+.sombra:hover {
+    box-shadow: 1px 0.5px 5.5px 1px;
+}
+
+.card {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.text-link {
+    text-decoration: none;
+}

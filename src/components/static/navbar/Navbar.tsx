@@ -122,7 +122,7 @@ export function NavBar2() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className='mb'>
         <Toolbar className='bg'>
           <IconButton
             edge="start"

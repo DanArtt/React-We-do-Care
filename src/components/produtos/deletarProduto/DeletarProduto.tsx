@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import { Box } from '@mui/material';
-import './DeletarCategoria.css';
+import './DeletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import { buscaId, deleteId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
+import Produto from '../../../models/Produto';
 import { TokenState } from '../../../store/tokens/tokenReducer';
-import Categoria from '../../../models/Categoria';
 
-function DeletarCategoria() {
+function DeletarProduto() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
 )
-  const [categoria, setCategoria] = useState<Categoria>()
+  const [produto, setProduto] = useState<Produto>()
 
   useEffect(() => {
     if (token == "") {
@@ -31,21 +31,21 @@ function DeletarCategoria() {
   }, [id])
 
   async function findById(id: string) {
-    buscaId(`/categoria/id/${id}`, setCategoria)
+    buscaId(`/produtos/${id}`, setProduto)
   }
 
   function sim() {
     navigate('/home')
-    deleteId(`/categoria/deletar/${id}`, {
+    deleteId(`/produtos/deletar/${id}`, {
       headers: {
         'Authorization': token
       }
     });
-    alert('Categoria deletada com sucesso');
+    alert('Produto deletada com sucesso');
   }
 
   function nao() {
-    navigate('/categorias')
+    navigate('/produtos')
   }
   return (
     <>
@@ -54,11 +54,10 @@ function DeletarCategoria() {
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
-                Deseja Deletar a Categoria:
-
+                Deseja Deletar o Produto:
               </Typography>
               <Typography color="textSecondary" >
-                {categoria?.modelo}
+                {produto?.nome}
               </Typography>
             </Box>
 
@@ -82,4 +81,4 @@ function DeletarCategoria() {
     </>
   );
 }
-export default DeletarCategoria;
+export default DeletarProduto;
