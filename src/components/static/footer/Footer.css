@@ -1,0 +1,31 @@
+.ajuste {
+    align-items: center;
+    justify-content: center;
+}
+
+.textoFooter {
+    color: white;
+}
+
+.textoBold {
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoPadding {
+    padding-top: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoWedoCare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}

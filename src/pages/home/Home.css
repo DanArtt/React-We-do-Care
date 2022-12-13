@@ -1,0 +1,12 @@
+body {
+    background-color: #c7afaf;
+}
+
+.carrossel {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+

@@ -1,0 +1,25 @@
+.negrito {
+    font-weight: bold !important;
+    color: black !important;;
+}
+
+.text-link {
+    text-decoration: none;
+}
+
+body {
+    background-color: #F2F3F4
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.btnModal{
+    border-color: white !important;
+    background-color: white !important;
+}
