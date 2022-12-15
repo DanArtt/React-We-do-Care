@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: 'inherit',
     },
     inputInput: {
-      padding: theme.spacing(1, 50, 1, 0),
+      padding: theme.spacing(1, 2, 1, 0),
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
@@ -79,7 +79,7 @@ export default function NavBar() {
   return (
     <div className={`${classes.root} `}>
       <AppBar position="static">
-        <Toolbar className='bg2 container'>
+        <Toolbar className='bg2'>
           <IconButton
             edge="start"
             className={classes.menuButton}

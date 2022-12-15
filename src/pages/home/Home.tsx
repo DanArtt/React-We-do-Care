@@ -14,12 +14,12 @@ import { Box } from '@mui/material';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 import { Link } from 'react-router-dom';
 
-const useStyles = makeStyles({
+export const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 1000,
   },
   media: {
-    height: 140,
+    height: 230,
   },
 });
 
@@ -33,19 +33,25 @@ export default function Home() {
         <Carousel images={countries} />
       </Box>
 
-      <Box className='card'>
+      <Box className='fundo'>
+        <div className='alinhar'>
+          <h3 className='produtos'>Sobre Nós</h3>
+        </div>
+      </Box>
+
+      <Box className='sobre'>
         <Link to='/produtos' className='text-link' >
           <Card className={`${classes.root} sombra`} >
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="/static/images/cards/contemplative-reptile.jpg"
+                image="https://dq9vwod1pbut.cloudfront.net/wp-content/uploads/2019/01/28142206/266613-imagem-da-marca-por-que-ela-deve-ser-percebida-por-toda-a-equipe-e1549645937151-2.jpg"
                 title="Contemplative Reptile"
               />
 
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Lizard
+                  We Do Care
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -56,9 +62,6 @@ export default function Home() {
             </CardActionArea>
             <CardActions>
               <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
                 Learn More
               </Button>
             </CardActions>
@@ -66,9 +69,16 @@ export default function Home() {
         </Link>
       </Box>
 
+      <Box className='fundo'>
+        <div className='alinhar'>
+          <h3 className='produtos'>Produtos</h3>
+        </div>
+      </Box>
 
-      <ListaProduto />
+      <Box className='container'>
 
+        <ListaProduto />
+      </Box>
     </>
   );
 }

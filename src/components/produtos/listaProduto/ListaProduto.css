@@ -3,9 +3,11 @@
 }
 
 .card {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 580px;
-    height: 400px;
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 80% !important;
+    height: 300px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
