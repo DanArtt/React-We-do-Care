@@ -11,7 +11,9 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ModalLogin from '../../../pages/login/ModalLogin';
-import { Box } from '@mui/material';
+import { Box } from "@mui/material";
+import Grid from '@material-ui/core/Grid';
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1,
+      flexGrow: 0.1,
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
@@ -56,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: 'inherit',
     },
     inputInput: {
-      padding: theme.spacing(1, 1, 1, 0),
+      padding: theme.spacing(1, 50, 1, 0),
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create('width'),
@@ -75,9 +77,9 @@ export default function NavBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} `}>
       <AppBar position="static">
-        <Toolbar className='bg2'>
+        <Toolbar className='bg2 container'>
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -87,7 +89,7 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={`logo ${classes.title}`} variant="h6" noWrap>
             WeDoCare
           </Typography>
           <div className={classes.search}>
@@ -103,12 +105,12 @@ export default function NavBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-          <Box marginRight={1}>
+          <Box marginRight={1} className='modal'>
             <ModalLogin />
           </Box>
-
         </Toolbar>
       </AppBar>
+      
     </div>
 
 
@@ -121,8 +123,8 @@ export function NavBar2() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" className='mb'>
+    <div className={`${classes.root} mb`}>
+      <AppBar position="static">
         <Toolbar className='bg'>
           <IconButton
             edge="start"
@@ -130,28 +132,51 @@ export function NavBar2() {
             color="inherit"
             aria-label="open drawer"
           >
-
           </IconButton>
-          <Link to='/home' className='text-none cursor spacing'>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Home
-            </Typography>
-          </Link>
-          <Link to='/categorias' className='text-none cursor spacing'>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Categorias
-            </Typography>
-          </Link>
-          <Link to='/categoriasform' className='text-none cursor spacing'>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Criar Categoria
-            </Typography>
-          </Link>
-          <Link to='/produtosform' className='text-none cursor spacing'>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Criar Produto
-            </Typography>
-          </Link>
+
+
+          <Container maxWidth="lg">
+            <Grid container spacing={8}>
+              <Grid item xs={12} sm={3}>
+                <Box>
+                  <Link to='/home' className='text-none cursor spacing'>
+                    <Typography className={classes.title} variant="h6" noWrap>
+                      Home
+                    </Typography>
+                  </Link>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                <Box>
+                  <Link to='/categorias' className='text-none cursor spacing'>
+                    <Typography className={classes.title} variant="h6" noWrap>
+                      Categorias
+                    </Typography>
+                  </Link>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} sm={3}>
+                <Box>
+                  <Link to='/categoriasform' className='text-none cursor spacing'>
+                    <Typography className={classes.title} variant="h6" noWrap>
+                      Criar Categoria
+                    </Typography>
+                  </Link>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} sm={3}>
+                <Box>
+                  <Link to='/produtosform' className='text-none cursor spacing'>
+                    <Typography className={classes.title} variant="h6" noWrap>
+                      Criar Produto
+                    </Typography>
+                  </Link>
+                </Box>
+              </Grid>
+            </Grid>
+          </Container>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
             </div>

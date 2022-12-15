@@ -19,6 +19,23 @@
     padding: 1rem;
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: auto;
+    justify-content: flex-end;
+    margin-left: 10rem;
+}
+
 .mb {
     margin-bottom: 1rem;
+}
+
+.logo {
+    margin-right: 10rem;
 }

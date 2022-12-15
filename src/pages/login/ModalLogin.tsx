@@ -62,7 +62,8 @@ function ModalLogin () {
       <Button
         variant="outlined"
         className="btnModal"
-        onClick={handleOpen}>Logar</Button>
+        onClick={handleOpen}
+        >Logar</Button>
       <Modal
         open={open}
         onClose={handleClose}

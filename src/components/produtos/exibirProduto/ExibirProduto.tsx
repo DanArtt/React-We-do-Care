@@ -40,6 +40,8 @@ function ExibirProduto() {
         <>
             <Box m={2} >
 
+                            <img src={produto.foto} className='produto'></img>
+                            <br></br>
                             <Typography variant="h5" component="h2">
                                 {produto.nome}
                             </Typography>
@@ -49,7 +51,6 @@ function ExibirProduto() {
                             <Typography variant="h5" component="h2">
                                 {produto.quantidade}
                             </Typography>
-                            <img src={produto.foto}></img>
             </Box>
         </>
     )

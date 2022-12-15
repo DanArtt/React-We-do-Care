@@ -1,3 +1,11 @@
 .text-link {
     text-decoration: none;
 }
+
+.card {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 580px;
+    height: 400px;
+}

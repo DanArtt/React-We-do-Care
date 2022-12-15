@@ -1,6 +1,7 @@
 .negrito {
     font-weight: bold !important;
-    color: black !important;;
+    color: black !important;
+    ;
 }
 
 .text-link {
@@ -15,11 +16,18 @@ body {
     margin-top: 1rem;
 }
 
-.cursor{
+.cursor {
     cursor: pointer;
 }
 
-.btnModal{
-    border-color: white !important;
-    background-color: white !important;
+.btnModal {
+    border-color: #3F51b5 !important;
+    background-color: #3F51B5 !important;
+    color: white !important;
+}
+
+.btnModal:hover {
+    border-color: #303f9f !important;
+    background-color: #303f9f !important; 
+    transform: rotate(10px);
 }

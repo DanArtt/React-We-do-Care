@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
-import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Produto from '../../../models/Produto';
@@ -16,14 +16,6 @@ function ListaProduto() {
         (state) => state.tokens
     )
 
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-
-        }
-    }, [token])
-
     async function getProdutos() {
         await busca("/produtos/all", setProduto)
     }
@@ -36,13 +28,13 @@ function ListaProduto() {
         <>
             {
                 produtos.map(produto => (
-                    <Box m={2} >
+                    <Box m={2} className='card' >
                         <Link to={`/produtos/${produto.id}`} className='text-link'>
-                            <Card variant="outlined">
+                            <Card variant="outlined" className='card'>
                                 <CardContent>
                                     <img src={produto.foto} width='200px' height='200px' ></img>
-                                    <Typography color="textSecondary" gutterBottom>
-                                        Produto
+                                    <Typography gutterBottom>
+                                        {produto.categoria?.modelo}
                                     </Typography>
                                     <Typography variant="h5" component="h2">
                                         {produto.nome}

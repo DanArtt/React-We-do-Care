@@ -16,7 +16,7 @@ export default function Footer() {
             <Container maxWidth="lg" >
                 <Grid container spacing={8} className=" textoFooter">
                     <Grid item xs={12} sm={3} >
-                        <Box >
+                        <Box>
 
                             <Box borderBottom={1} className='textoBold'  > Categorias </Box>
                             <Box className="textoPadding" >
