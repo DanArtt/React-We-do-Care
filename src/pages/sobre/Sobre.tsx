@@ -22,7 +22,7 @@ function Sobre() {
                 <div className="flip-card " >
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src="https://media.discordapp.net/attachments/1011750581146239077/1054399048729235509/IMG_20221115_193010_500.jpg?width=663&height=663" alt="Avatar" className='avatarEmpresa' />
+                            <img src="https://media.discordapp.net/attachments/1011750581146239077/1054399048729235509/IMG_20221115_193010_500.jpg?width=663&height=663" alt="Membro da Equipe" className='avatarEmpresa' />
                         </div>
                         <div className="flip-card-back">
 
@@ -47,7 +47,7 @@ function Sobre() {
                 <div className="flip-card " >
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src="https://cdn.discordapp.com/attachments/1027967124020396132/1054407861385568306/Picsart_22-12-19_11-39-31-109.jpg" alt="Avatar" className='avatarEmpresa' />
+                            <img src="https://cdn.discordapp.com/attachments/1027967124020396132/1054407861385568306/Picsart_22-12-19_11-39-31-109.jpg" alt="Membro da Equipe" className='avatarEmpresa' />
                         </div>
                         <div className="flip-card-back">
 
