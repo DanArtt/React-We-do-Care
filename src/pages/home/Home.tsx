@@ -13,6 +13,8 @@ import Carousel from '../../components/carrossel/Carousel';
 import { Box } from '@mui/material';
 import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
 import { Link } from 'react-router-dom';
+import { Grid } from '@material-ui/core';
+import ModalSobre from './HomeModal';
 
 export const useStyles = makeStyles({
   root: {
@@ -40,13 +42,12 @@ export default function Home() {
       </Box>
 
       <Box className='sobre'>
-        <Link to='/produtos' className='text-link' >
           <Card className={`${classes.root} sombra`} >
             <CardActionArea>
               <CardMedia
                 className={classes.media}
                 image="https://dq9vwod1pbut.cloudfront.net/wp-content/uploads/2019/01/28142206/266613-imagem-da-marca-por-que-ela-deve-ser-percebida-por-toda-a-equipe-e1549645937151-2.jpg"
-                title="Contemplative Reptile"
+                title="Conheça nosso trabalho"
               />
 
               <CardContent>
@@ -54,19 +55,15 @@ export default function Home() {
                   We Do Care
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
+                  
                 </Typography>
 
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
+              <ModalSobre />
             </CardActions>
           </Card>
-        </Link>
       </Box>
 
       <Box className='fundo'>
@@ -75,10 +72,8 @@ export default function Home() {
         </div>
       </Box>
 
-      <Box className='container'>
-
-        <ListaProduto />
-      </Box>
+    <ListaProduto />
     </>
   );
 }
+ 

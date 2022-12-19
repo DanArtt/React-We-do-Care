@@ -31,6 +31,7 @@ body {
 .container {
     align-items: center;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 .produtos {
@@ -48,4 +49,28 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+}
+
+.card {
+    flex-flow: row wrap;
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    width: 600px !important; 
+    height: 400px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.btnSobre {
+    border-color: #3F51b5 !important;
+    background-color: #3F51B5 !important;
+    color: white !important;
+}
+
+.btnSobre:hover {
+    border-color: #303f9f !important;
+    background-color: #303f9f !important; 
+    transform: rotate(10px);
 }
