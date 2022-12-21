@@ -36,7 +36,7 @@ body {
 
 .produtos {
     text-align: center !important;
-    font-family: sans-serif !important;
+    font-family: sans-serif !important ;
     color: white;
 }
 
@@ -44,11 +44,30 @@ body {
     text-align: center !important;
     background-color: green !important;
     height: 3rem;
+    border-style: solid;
+    border-color: black !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fundoSobre{
+    text-align: center !important;
+    background-color:#A0AA60 !important;
+    height: 3rem;
     border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.bodymodal{
+    background-color: grey;
 }
 
 .card {
@@ -64,12 +83,14 @@ body {
 }
 
 .btnSobre {
-    border-color: black !important;
-    background-color: green !important;
+    border-color: #3F51b5 !important;
+    background-color: #3F51B5 !important;
     color: white !important;
 }
 
 .btnSobre:hover {
-    border-color: black !important;
-    background-color: #046c2c !important; 
+    border-color: #303f9f !important;
+    background-color: #303f9f !important; 
+    transform: rotate(10px);
 }
+

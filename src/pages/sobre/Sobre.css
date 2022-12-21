@@ -7,6 +7,7 @@ body {
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    
 
 }
 
@@ -17,7 +18,7 @@ body {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
 }
 
 .flip-card:hover .flip-card-inner {
@@ -39,9 +40,11 @@ body {
 }
 
 .flip-card-back {
-    background-color: #29b963;
+    background-color: #000000;
     color: white;
     transform: rotateY(180deg);
+    color: #a0aa50;
+    border-radius: 15px;
 }
 
 
@@ -60,7 +63,6 @@ h3 {
     flex-wrap: wrap;
     display: inline-block;
     padding-right: 50px;
-
 }
 
 .iconeAlinhado {
@@ -81,3 +83,32 @@ a {
 .mt1 {
     margin-top: 5px;
 }
+
+.sobrecss{
+    margin-left: 12rem !important;
+    margin-bottom: 3rem !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobrecss2{
+    
+    margin-left: 11.3rem !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb {
+    margin-bottom: 3rem;
+}
+
+.quebralinha {
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+    padding-left:7px ;
+}
+
+
+
+

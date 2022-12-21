@@ -52,10 +52,11 @@ export default function Home() {
 
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                   Nosso Trabalho
+                  Sobre nós
+                  
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  teste
+                  Somos uma startup que  busca viabilizar o cuidado e bem-estar daqules que mais necessitam. 
                 </Typography>
 
               </CardContent>

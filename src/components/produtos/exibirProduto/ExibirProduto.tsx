@@ -50,22 +50,27 @@ function ExibirProduto() {
                             <img src={produto.foto} width='400' height='400'></img>
                         </Box>
 
-                        <Box className="valuesPosition valuesStyle" justifyContent='center'>
+                        <Box className="valuesPosition valuesStyle textos1" justifyContent='center' alignItems='center'>
 
-                        <Typography variant="h5" component="h2" className="valueName valuesStyle">
-                            {produto.nome}
-                        </Typography>
+                            <Typography variant="h5" component="h2" className="valueName">
+                                {produto.nome}
+                            </Typography>
+                            <Typography variant="h5" component="h2" >
+                                {produto.categoria?.modelo}
+                            </Typography>
 
-                        <Typography variant="h5" component="h2" className="valuesStyle precoValue centralizar">
-                            R$ {produto.preco}
-                        </Typography>
+                            <Typography variant="h5" component="h2" className="valuesStyle precoValue">
+                                R$ {produto.preco}
+                            </Typography>
 
-                        <Box className="centralizar">
-                            <Ratings />
+                            <Box>
+                                <Ratings />
+                            </Box>
+
                         </Box>
+
                     </Box>
-                    </Box>
-                    
+
                 </Card>
             </Box>
 

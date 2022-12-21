@@ -6,7 +6,6 @@ import { Box } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 import Login from './Login';
 import './Login.css';
-import { Link } from 'react-router-dom';
 
 
 function getModalStyle() {
@@ -60,9 +59,11 @@ function ModalLogin() {
 
   return (
     <div>
-      <Link to='#'
+      <Button
+        variant="outlined"
+        className="btnModal"
         onClick={handleOpen}
-      >Logar</Link>
+      >Logar</Button>
       <Modal
         open={open}
         onClose={handleClose}

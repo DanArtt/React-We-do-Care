@@ -30,10 +30,6 @@
     margin-bottom: 0.5rem !important;
 }
 
-.centralizar {
-    margin-left: 4rem !important;
-}
-
 .col {
     height: 1.75rem;
     width: 0.0625rem;
@@ -45,5 +41,9 @@
     width: 0.0625rem;
     background: rgb(222, 224, 228);
     margin-left: 4rem !important;
-    margin-top: 4rem !important;;
+    margin-top: 4rem !important;
+}
+
+.textos1 {
+    text-align: center;
 }
