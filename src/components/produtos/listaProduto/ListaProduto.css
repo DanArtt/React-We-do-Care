@@ -13,3 +13,27 @@
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
+
+.TypographyD {
+    color: black !important;
+    font-weight: bold !important;
+    margin-top: 1rem !important;
+    font-size: large !important;
+}
+
+.Typography {
+    color: black !important;
+}
+
+.btnColor {
+    color: white !important;
+    background-color: green !important;
+}
+
+.btnPosition {
+    margin-left: 2rem !important;
+}
+
+.espacer {
+    margin-bottom: 1rem !important;
+}

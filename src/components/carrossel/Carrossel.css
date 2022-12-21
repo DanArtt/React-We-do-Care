@@ -72,38 +72,40 @@
     font-size: 90px;
     top: 50%;
     transform: translate(0, -20%);
-    background-color: rgba(220, 220, 220, 0.781);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 53px;
-    height: 25px;
-    border-radius: 50%;
-    padding-bottom: 26px;
+    height: 53px;
     cursor: pointer;
   }
   
   .carousel_arrow_left {
+    background-image: url('https://cdn.discordapp.com/attachments/812167792224239626/1055124718476345344/left-arrow.png');
+    background-size: 53px 53px;
+    background-repeat: no-repeat;
     left: 15px;
   }
   
   .carousel_arrow_right {
+    background-image: url('https://cdn.discordapp.com/attachments/812167792224239626/1055124718811873330/right-arrow.png');
+    background-size: 53px 53px;
+    background-repeat: no-repeat;
     right: 15px;
   }
   
   .carousel_arrow_left:hover {
     width: 57px;
-    height: 30px;
+    height: 40px;
     padding-bottom: 25px;
-    color:yellowgreen;
-    background-color: cadetblue;
+    filter: grayscale(100%);
   }
   .carousel_arrow_right:hover {
     width: 57px;
-    height: 30px;
+    height: 40px;
     padding-bottom: 25px;
-    color:yellowgreen;
-    background-color: cadetblue;
+    filter: grayscale(100%);
+    
   }
   
   .carousel_pagination {

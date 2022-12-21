@@ -7,6 +7,8 @@ import Produto from "../../../models/Produto";
 import { buscaId } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 import './ExibirProduto.css';
+import Ratings from "./Rating/Rating";
+
 
 function ExibirProduto() {
 
@@ -39,19 +41,34 @@ function ExibirProduto() {
     return (
         <>
             <Box m={2} >
+                <Card>
 
-                            <img src={produto.foto} className='produto'></img>
-                            <br></br>
-                            <Typography variant="h5" component="h2">
-                                {produto.nome}
-                            </Typography>
-                            <Typography variant="h5" component="h2">
-                                {produto.preco}
-                            </Typography>
-                            <Typography variant="h5" component="h2">
-                                {produto.quantidade}
-                            </Typography>
+                    <Box display='flex' flexDirection='row' flexWrap='wrap'>
+
+                        <Box className='iconPosition' alignItems='center'>
+
+                            <img src={produto.foto} width='400' height='400'></img>
+                        </Box>
+
+                        <Box className="valuesPosition valuesStyle" justifyContent='center'>
+
+                        <Typography variant="h5" component="h2" className="valueName valuesStyle">
+                            {produto.nome}
+                        </Typography>
+
+                        <Typography variant="h5" component="h2" className="valuesStyle precoValue centralizar">
+                            R$ {produto.preco}
+                        </Typography>
+
+                        <Box className="centralizar">
+                            <Ratings />
+                        </Box>
+                    </Box>
+                    </Box>
+                    
+                </Card>
             </Box>
+
         </>
     )
 }

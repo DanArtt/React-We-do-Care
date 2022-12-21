@@ -39,40 +39,35 @@ function ListaProduto() {
                                 <Link to={`/produtos/${produto.id}`} className='text-link'>
                                     <CardContent>
                                         <img src={produto.foto} width='200px' height='auto' ></img>
-                                        <Typography gutterBottom>
+                                        <Typography gutterBottom className='TypographyD'>
                                             {produto.categoria?.modelo}
                                         </Typography>
-                                        <Typography variant="h5" component="h2">
+                                        <Typography variant="h5" component="h2" className='Typography'>
                                             {produto.nome}
                                         </Typography>
-                                        <Typography variant="h5" component="h2">
+                                        <Typography variant="h5" component="h2" className='Typography'>
                                             R$ {produto.preco}
                                         </Typography>
                                     </CardContent>
                                 </Link>
-                                <Box alignItems='center' justifyContent='center' display='flex'>
+                                <Box alignItems='center' justifyContent='center' display='flex' className='espacer'>
                                     <CardActions>
                                         <Link to={`/produtosform/${produto.id}`} className="text-link">
-                                            <Box m={1} >
-                                                <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                                                    atualizar
+                                                <Button variant="contained" className="btnColor btnPosition" size='small' >
+                                                    editar
                                                 </Button>
-                                            </Box>
+    
                                         </Link>
+                                        
                                         <Link to={`/deletarProduto/${produto.id}`} className="text-link">
-                                            <Box mx={1}>
-                                                <Button variant="contained" size='small' color="secondary">
-                                                    Deletar
+                                                <Button variant="contained" size='small' className='btnColor btnPosition'>
+                                                    excluir
                                                 </Button>
-                                            </Box>
                                         </Link>
                                     </CardActions>
                                 </Box>
                             </Box>
-
-
                         </Card>
-
                     </Box>
                 ))
             }

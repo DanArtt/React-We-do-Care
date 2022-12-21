@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { Box } from "@mui/material";
 import Link from "@material-ui/core/Link";
 import './Footer.css'
+import ModalLogin from "../../../pages/login/ModalLogin";
 
 export default function Footer() {
     return <footer>
@@ -42,9 +43,7 @@ export default function Footer() {
                     <Grid item xs={12} sm={3} >
                         <Box borderBottom={1} className='textoBold' > Minha Conta </Box>
                         <Box className="textoPadding">
-                            <Link href="/login" color="inherit">
-                                Entrar
-                            </Link>
+                            <ModalLogin />
                         </Box>
 
                         <Box className="textoPadding" >
