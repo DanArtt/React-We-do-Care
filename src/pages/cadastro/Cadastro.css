@@ -1,0 +1,28 @@
+.negrito{
+    font-weight: bold !important;
+}
+
+.btnCancelar{
+    margin-right: 20px !important;
+}
+
+.text-link {
+    text-decoration: none !important;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.ml {
+    margin-left: 1rem;
+}
+
+.mr {
+    margin-right: 1rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
