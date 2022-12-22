@@ -114,7 +114,7 @@ function Sobre() {
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1'>
                                     <InstagramIcon />
-                                    <a href='https://instagram.com/igornaspereira?igshid=YmMyMTA2M2Y='>Instagram</a>
+                                    <a href='#'>Instagram</a>
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1 mb'>
                                     <GitHubIcon />
@@ -146,7 +146,7 @@ function Sobre() {
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1'>
                                     <InstagramIcon />
-                                    <a href='https://instagram.com/igornaspereira?igshid=YmMyMTA2M2Y='>Instagram</a>
+                                    <a href='https://instagram.com/idansllv?igshid=OGQ2MjdiOTE='>Instagram</a>
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1 mb'>
                                     <GitHubIcon />
@@ -212,15 +212,15 @@ function Sobre() {
                             <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
                                 <Box display='flex' alignItems='center'>
                                     <LinkedInIcon />
-                                    <a href='https://www.linkedin.com/in/erick-bellot/'>Linkedin</a>
+                                    <a href='https://www.linkedin.com/in/bernardo-bezerra/'>Linkedin</a>
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1'>
                                     <InstagramIcon />
-                                    <a href='https://instagram.com/erick_bellot?igshid=OGQ2MjdiOTE='>Instagram</a>
+                                    <a href='https://instagram.com/bernardobezerra5?igshid=NTA5ZTk1NTc='>Instagram</a>
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1 mb'>
                                     <GitHubIcon />
-                                    <a href='https://github.com/Erickbellot12'>Gitbub</a>
+                                    <a href='https://github.com/Zerra86'>Gitbub</a>
                                 </Box>
                                 <Box>
                                     <img src="https://media.discordapp.net/attachments/1011750581146239077/1055143493632282704/loguinhu.png" alt="ImagemEmpresa" />
@@ -254,7 +254,7 @@ function Sobre() {
                                 </Box>
                                 <Box display='flex' alignItems='center' className='mt1 mb'>
                                     <GitHubIcon />
-                                    <a href='https://github.com/Erickbellot12'>Gitbub</a>
+                                    <a href='https://github.com/Raphaelsants'>Gitbub</a>
                                 </Box>
                                 <Box>
                                     <img src="https://media.discordapp.net/attachments/1011750581146239077/1055143493632282704/loguinhu.png" alt="ImagemEmpresa" />
