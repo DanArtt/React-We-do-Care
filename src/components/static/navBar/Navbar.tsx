@@ -10,7 +10,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, useNavigate } from "react-router-dom";
-import FadeMenu from "./dropMenu/DropMenu";
+import FadeMenu from "./dropmenu/DropMenu";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../../store/tokens/action";
 import './Navbar.css'

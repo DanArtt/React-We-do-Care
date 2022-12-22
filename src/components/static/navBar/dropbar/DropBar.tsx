@@ -17,7 +17,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import './DropBar.css'
 import { Box } from '@material-ui/core';
-import DropMenu from '../dropMenu/DropMenu';
+import DropMenu from '../dropmenu/DropMenu';
 
 const drawerWidth = 240;
 

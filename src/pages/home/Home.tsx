@@ -11,7 +11,7 @@ import './Home.css'
 import { countries } from '../../components/carrossel/Data';
 import Carousel from '../../components/carrossel/Carousel';
 import { Box } from '@mui/material';
-import ListaProduto from '../../components/produtos/listaProduto/ListaProduto';
+import ListaProduto from '../../components/produtos/listaproduto/ListaProduto';
 import { Link } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import ModalSobre from './HomeModal';

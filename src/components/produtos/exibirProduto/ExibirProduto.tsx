@@ -7,7 +7,7 @@ import Produto from "../../../models/Produto";
 import { buscaId } from "../../../services/Service";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 import './ExibirProduto.css';
-import Ratings from "./Rating/Rating";
+import Ratings from "./rating/Rating";
 
 
 function ExibirProduto() {
