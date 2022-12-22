@@ -90,8 +90,8 @@
 .typo:hover{
     color: #fff !important;
     opacity: .5;
-    
     border-bottom: 2px solid #fff;
+    transform:translateY(-2px)
 }
 
 .menuicons{

@@ -35,8 +35,7 @@ function Navbar() {
     <>
       <AppBar position="static" className="appbar">
         <Toolbar variant="dense" className="bar">
-          <Box><DropBar/>
-          </Box>
+        <DropBar />
 
           <Box className="logo">
               <img className="text-logo" src={Logo} alt="" />
