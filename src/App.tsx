@@ -6,15 +6,15 @@ import Footer from './components/static/footer/Footer'
 import Home from './pages/home/Home';
 import Cadastro from './pages/cadastro/Cadastro';
 import Login from './pages/login/Login';
-import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
+import ListaCategoria from './components/categorias/listacategoria/ListaCategoria';
 import ListaProduto from './components/produtos/listaproduto/ListaProduto';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import CriarProduto from './components/produtos/criarproduto/CriarProduto';
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
-import CriarCategoria from './components/categorias/criarCategoria/CriarCategoria';
-import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
-import ExibirProduto from './components/produtos/exibirProduto/ExibirProduto';
+import CriarCategoria from './components/categorias/criarcategoria/CriarCategoria';
+import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
+import ExibirProduto from './components/produtos/exibirproduto/ExibirProduto';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
