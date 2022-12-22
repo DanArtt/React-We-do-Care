@@ -21,6 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 1.5rem;
+    font-size: 10px !important;
 }
 
 .textoWedoCare {
@@ -32,4 +34,21 @@
 
 .mt {
     margin-top: 1rem;
+}
+
+.logoFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.imageFooter {
+    width: 10rem;
+}
+
+.textFooter {
+    font-size: .7rem !important;
+    margin-top: .5rem !important;
 }

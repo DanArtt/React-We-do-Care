@@ -1,10 +1,11 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Link from "@material-ui/core/Link";
 import './Footer.css'
 import ModalLogin from "../../../pages/login/ModalLogin";
+import LogoFooter from '../../assets/LogoFooter.png';
 
 export default function Footer() {
     return <footer>
@@ -106,7 +107,10 @@ export default function Footer() {
                 </Grid>
 
                 <Box className="textoFooter textoWedoCare" >
-                    We Do Care &reg; {new Date().getFullYear()}
+                    <Box className="logoFooter">
+                    <img src={LogoFooter} className="imageFooter" alt="Logo Direitos autorais" />
+                    <Typography className="textFooter">2022</Typography>
+                    </Box>
                 </Box>
 
             </Container>

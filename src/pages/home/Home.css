@@ -42,10 +42,9 @@ body {
 
 .fundo{
     text-align: center !important;
-    background-color: green !important;
+    background-color: #4c5c0c !important;
     height: 3rem;
-    border-style: solid;
-    border-color: black !important; 
+    box-shadow: 3px 2px 5px #000; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +56,6 @@ body {
     text-align: center !important;
     background-color:#A0AA60 !important;
     height: 3rem;
-    border-color: black;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,6 +7,7 @@ import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 import './CriarCategoria.css';
+import { toast } from 'react-toastify';
 
 function CriarCategoria() {
 
@@ -35,7 +36,16 @@ function CriarCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
             navigate("/login")
     
         }
@@ -57,14 +67,32 @@ function CriarCategoria() {
                     'Authorization': token
                 }
             })
-            alert('Categoria atualizade com sucesse');
+            toast.success('Categoria atualizada com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         } else {
             post('/categoria/criar', categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert("Categoria criade com sucesse")
+            toast.success('Categoria criada com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
         back()
     }
