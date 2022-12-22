@@ -1,0 +1,48 @@
+.negrito {
+    font-weight: bold !important;
+    color: black !important;
+    ;
+}
+
+.text-link {
+    text-decoration: none;
+}
+
+body {
+    background-color: #F2F3F4
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.btnModal {
+    border-color: #3F51b5 !important;
+    background-color: #3F51B5 !important;
+    color: white !important;
+}
+
+.btnModal:hover {
+    border-color: #303f9f !important;
+    background-color: #303f9f !important; 
+    transform: rotate(10px);
+}
+
+.link-modal {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-modal:hover {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    justify-content: center;
+}

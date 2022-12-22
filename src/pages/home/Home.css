@@ -1,0 +1,94 @@
+body {
+    background-color: #f2f3f4;
+}
+
+.carrossel {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.sombra:hover {
+    box-shadow: 1px 0.5px 5.5px 1px;
+}
+
+.sobre {
+    margin-top: 2rem;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.text-link {
+    text-decoration: none;
+}
+
+.container {
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.produtos {
+    text-align: center !important;
+    font-family: sans-serif !important ;
+    color: white;
+}
+
+.fundo{
+    text-align: center !important;
+    background-color: #4c5c0c !important;
+    height: 3rem;
+    box-shadow: 3px 2px 5px #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.fundoSobre{
+    text-align: center !important;
+    background-color:#A0AA60 !important;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.bodymodal{
+    background-color: grey;
+}
+
+.card {
+    flex-flow: row wrap;
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    width: 600px !important; 
+    height: 400px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.btnSobre {
+    border-color: #3F51b5 !important;
+    background-color: #3F51B5 !important;
+    color: white !important;
+}
+
+.btnSobre:hover {
+    border-color: #303f9f !important;
+    background-color: #303f9f !important; 
+    transform: rotate(10px);
+}
+

@@ -1,0 +1,28 @@
+.background {
+    background: #4c5c0c;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    box-shadow: 1px 1px 5px #000000;
+}
+
+.icon {
+    color: #fff;
+}
+
+.page-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.termos {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem !important;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #4c5c0c;
+
+}

@@ -1,0 +1,49 @@
+
+.iconPosition {
+    margin-left: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.valuesPosition {
+    margin-left: 8rem;
+}
+
+.valueName {
+    margin-top: 2rem !important;
+    margin-left: 3rem !important;
+    font-weight: bold !important;
+}
+
+.valuesStyle {
+    color: black !important;
+}
+
+.quantidadeStyle {
+    margin-left: 4rem !important;
+    margin-bottom: 23rem !important;
+    background-color: #63d163;
+}
+
+.precoValue {
+    font-weight: bold !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.col {
+    height: 1.75rem;
+    width: 0.0625rem;
+    background: rgb(222, 224, 228);
+}
+
+.colDiv {
+    height: 20rem;
+    width: 0.0625rem;
+    background: rgb(222, 224, 228);
+    margin-left: 4rem !important;
+    margin-top: 4rem !important;
+}
+
+.textos1 {
+    text-align: center;
+}

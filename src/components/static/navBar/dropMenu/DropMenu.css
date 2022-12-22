@@ -1,0 +1,15 @@
+.bar-button{
+    text-transform: uppercase;
+    text-decoration: none !important;
+    color: #e3e3e3 !important;
+    font-weight: bold !important;
+    margin-right: 20px !important;
+    border-bottom: 2px solid #b4cf44;
+}
+
+.bar-button:hover{
+    color: #fff !important;
+    border-bottom: 2px solid #fff;
+    opacity: 0.5;
+    transform:translateY(-2px)
+}
