@@ -2,10 +2,11 @@
     background: #4c5c0c;
     margin-bottom: .5rem;
     margin-top: .5rem;
+    box-shadow: 1px 1px 5px #000000;
 }
 
-.paginas {
-    color: #000000;
+.icon {
+    color: #fff;
 }
 
 .page-box {

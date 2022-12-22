@@ -129,21 +129,21 @@ export default function DropBar() {
 
         <Box className='background'>
           <Box className='page-box' >
-            <HomeIcon />
+            <HomeIcon className='icon'></HomeIcon>
             <Link className='paginas' to='/home'>Home</Link>
           </Box>
         </Box>
 
         <Box className='background'>
           <Box className='page-box'>
-            <StoreIcon />
+            <StoreIcon className='icon'></StoreIcon>
             <Link className='paginas' to='/produtos'>Produtos</Link>
           </Box>
         </Box>
 
         <Box className='background'>
         <Box className='page-box'>
-          <WorkIcon />
+          <WorkIcon className='icon'></WorkIcon>
           <Link className='paginas' to='/categorias'>Categorias</Link>
         </Box>
         </Box>
@@ -154,14 +154,14 @@ export default function DropBar() {
 
         <Box className='background'>
         <Box className='page-box'>
-          <PersonIcon />
+          <PersonIcon className='icon'></PersonIcon>
           <Link className='paginas' to='/home'>Perfil</Link>
         </Box>
         </Box>
 
         <Box className='background'>
         <Box className='page-box'>
-          <ReceiptIcon />
+          <ReceiptIcon className='icon'></ReceiptIcon>
           <Link className='paginas' to='/home'>Meus Pedidos</Link>
         </Box>
         </Box>
