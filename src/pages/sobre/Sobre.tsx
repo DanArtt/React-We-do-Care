@@ -208,7 +208,7 @@ function Sobre() {
                         <div className="flip-card-back">
 
                             <h1>Bernardo Silva</h1>
-                            <p className='quebralinha'>Responsável por pesquisar componentes e dormir xd.</p>
+                            <p className='quebralinha'>Responsável por pesquisar componentes.</p>
                             <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
                                 <Box display='flex' alignItems='center'>
                                     <LinkedInIcon />
@@ -237,12 +237,12 @@ function Sobre() {
                 <div className="flip-card " >
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src="https://pbs.twimg.com/profile_images/751536692876627968/U66KGZmY_400x400.jpg" className='avatarEmpresa' />
+                            <img src="https://media.discordapp.net/attachments/1011750581146239077/1055457062416568350/AirBrush_202104160710482.jpg?width=600&height=671" className='avatarEmpresa' />
                         </div>
                         <div className="flip-card-back">
 
                             <h1>Raphael Santos</h1>
-                            <p>Faltou o curso todo e não fez nada.</p>
+                            <p>Auxilio geral no desempenho do grupo.</p>
                             <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
                                 <Box display='flex' alignItems='center'>
                                     <LinkedInIcon />
