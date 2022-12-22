@@ -51,7 +51,6 @@ function ModalSobre() {
             <Box display="flex" justifyContent="flex-end" className="cursor">
                 <CloseIcon onClick={handleClose} />
             </Box>
-
             <Sobre />
         </div>
     );
@@ -71,6 +70,7 @@ function ModalSobre() {
                 aria-describedby="simple-modal-description"
             >
                 {body}
+
             </Modal>
         </div>
     );

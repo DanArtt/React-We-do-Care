@@ -16,7 +16,7 @@ import { addToken } from "../../../store/tokens/action";
 import './Navbar.css'
 import { ClassNames } from "@emotion/react";
 import Carrinho from "./carrinho/Carrinho";
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/Logo.png'
 import ModalLogin from "../../../pages/login/ModalLogin";
 import DropBar from "./dropbar/DropBar";
 
@@ -35,8 +35,7 @@ function Navbar() {
     <>
       <AppBar position="static" className="appbar">
         <Toolbar variant="dense" className="bar">
-          <Box><DropBar/>
-          </Box>
+        <DropBar />
 
           <Box className="logo">
               <img className="text-logo" src={Logo} alt="" />
@@ -68,7 +67,9 @@ function Navbar() {
                       Minha Conta
                     </Button>
                     <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}><ModalLogin></ModalLogin></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to='/login' className="decoration-none">
+                      Logar
+                      </Link></MenuItem>
                       <MenuItem onClick={popupState.close}> Ver Perfil </MenuItem>
                       <MenuItem onClick={popupState.close}> Meus Pedidos </MenuItem>
                       <Box onClick={goLogout}>
@@ -105,6 +106,8 @@ function Navbar() {
 
         </Toolbar>
       </AppBar>
+
+      <div className="marginBar"></div>
     </>
   );
 }

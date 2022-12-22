@@ -8,6 +8,7 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokenReducer';
 import './CriarProduto.css';
+import { toast } from 'react-toastify';
 
 function CriarProduto() {
 
@@ -60,7 +61,16 @@ function CriarProduto() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
             navigate("/login")
 
         }
@@ -86,7 +96,16 @@ function CriarProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizade com sucesse');
+            toast.success('Produto Atualizado com Sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
 
         } else {
             post('/produtos/criar', produto, setProduto, {
@@ -94,7 +113,16 @@ function CriarProduto() {
                     'Authorization': token
                 }
             })
-            alert("Produto criade com sucesse")
+            toast.success('Produto Criado com Sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         }
         back()
     }

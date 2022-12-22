@@ -10,4 +10,6 @@
 .bar-button:hover{
     color: #fff !important;
     border-bottom: 2px solid #fff;
+    opacity: 0.5;
+    transform:translateY(-2px)
 }

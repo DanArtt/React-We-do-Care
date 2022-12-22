@@ -15,6 +15,8 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import CriarCategoria from './components/categorias/criarCategoria/CriarCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import ExibirProduto from './components/produtos/exibirProduto/ExibirProduto';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -22,6 +24,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
+        <ToastContainer />
         <Router>
 
           <NavBar />
@@ -42,6 +45,7 @@ function App() {
             <Route path='/produtosform/:id' element={<CriarProduto />} />
             <Route path='/deletarProduto/:id' element={<DeletarProduto />} />
             <Route path='/produtos/:id' element={<ExibirProduto />} />
+            <Route path='/login' element={<Login />} />
 
           </Routes>
 

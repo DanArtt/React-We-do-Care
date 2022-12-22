@@ -6,6 +6,7 @@ import './Cadastro.css';
 import User from '../../models/User';
 import { cadastro } from '../../services/Service';
 import './Cadastro.css';
+import { toast } from 'react-toastify';
 
 function Cadastro() {
 
@@ -76,9 +77,27 @@ function Cadastro() {
         if (confirmarSenha == user.senha_usuario) {
             try{
                 await cadastro(`/usuario/cadastrar`, user, setUserResult)
-                alert('Usuário cadastrado com sucesso')
+                toast.success('Usuário Cadastrado com Sucesso', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    });
             }catch(error){
-                alert('Dados Incorretos')
+                toast.error('Preencha os campos corretamente!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    });
             }            
         } 
     }

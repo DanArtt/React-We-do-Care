@@ -8,6 +8,7 @@ import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/action';
 import ModalLogin from './ModalLogin';
+import { toast } from 'react-toastify';
 
 
 function Login() {
@@ -42,9 +43,27 @@ function Login() {
         try {
             await login('/auth/logar', userLogin, setToken)
 
-            alert('Usuário logado com sucesso!');
+            toast.success('Usuário Logado com Sucesso', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
         } catch (error) {
-            alert('Dados do usuário inconsistentes. Erro ao logar!');
+            toast.error('Dados Inválidos. Tente novamente!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });;
         }
     }
 
@@ -57,7 +76,7 @@ function Login() {
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='negrito' >Entrar</Typography>
                         <TextField value={userLogin.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Email' variant='outlined' name='email' margin='normal' fullWidth />
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <Box marginTop={2} textAlign='center'>
+                        <Box marginTop={2} textAlign='center' onClick={ModalLogin}>
                                 <Button type='submit' variant='contained' color='primary'>
                                     Logar
                                 </Button>

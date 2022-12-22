@@ -31,3 +31,18 @@ body {
     background-color: #303f9f !important; 
     transform: rotate(10px);
 }
+
+.link-modal {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-modal:hover {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    justify-content: center;
+}
